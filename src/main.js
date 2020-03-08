@@ -28,12 +28,13 @@ new Vue({
 			data() {
 				return {
 					movies: [
-						{ title: 'A League of Their Own' },
-						{ title: 'Fried Green Tomatoes' },
-						{ title: 'Thelma & Louise' }
+						{ title: 'A League of Their Own', genre: genres.COMEDY },
+						{ title: 'Fried Green Tomatoes', genre: genres.DRAMA },
+						{ title: 'Thelma & Louise', genre: genres.CRIME }
 					]
 				};
-			}
+			},
+			props: [ 'genre', 'time' ]
 		},
 		'movie-filter': {
 			data() {
